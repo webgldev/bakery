@@ -1,12 +1,16 @@
 {
+  "homepage": "http://webgldev.github.io/bakery",
   "scripts": {
-    "dev": "vite"
+    "dev": "vite",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@react-three/drei": "^9.105.4",
     "@react-three/fiber": "^8.16.2",
     "@react-three/postprocessing": "^2.16.2",
     "@vitejs/plugin-react": "^4.2.1",
+    "gh-pages": "^6.1.1",
     "leva": "^0.9.35",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
