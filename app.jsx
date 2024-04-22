@@ -3,7 +3,7 @@ import { useControls } from 'leva';
 
 import { Object3D } from 'three';
 import { Canvas } from '@react-three/fiber';
-import { CameraControls, Environment, PerspectiveCamera } from '@react-three/drei';
+import { CameraControls,PerspectiveCamera } from '@react-three/drei';
 import { EffectComposer, Bloom } from '@react-three/postprocessing';
 
 import { BakeryHouse } from './components/BakeryHouse.jsx';
@@ -16,10 +16,7 @@ export function App() {
   const cameraRef = useRef();
 
   const {
-    background, fov, lightX, lightY, lightZ, lightIntensity, luminanceThreshold, luminanceSmoothing, height,
-    lightX2,
-lightY2,
-lightZ2
+    fov, lightX, lightY, lightZ, lightIntensity, luminanceThreshold, luminanceSmoothing, height, lightX2, lightY2, lightZ2
   } = useControls({
     background: { label: 'Background', options: { city: 'city', forest: 'forest', studio: 'studio', dawn: 'dawn', night: 'night' }, value: 'city' },
     fov: { label: 'Field of View', value: 30, min: 10, max: 90, step: 1 },
